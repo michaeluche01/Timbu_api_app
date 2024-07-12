@@ -27,3 +27,6 @@ Screenshots
 
 screenshots\timbb home.jpg
 screenshots\TIMBU COMPLETE MAIN.jpg
+![TIMBU COMPLETE MAIN](https://github.com/user-attachments/assets/420ef9f4-d73b-4b65-98b5-2c03c81f7eb4)
+![timbb home](https://github.com/user-attachments/assets/3ca78d1b-58ba-4bc2-9a5f-2b1ef84a1274)
+
