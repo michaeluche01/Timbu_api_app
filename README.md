@@ -1,16 +1,29 @@
-# timbu_api_app
+Project Description
 
-A new Flutter project.
+Timbu is a mobile application that (briefly describe the app's functionality here). It allows users to (mention key user actions or features).
 
-## Getting Started
+Getting Started
 
-This project is a starting point for a Flutter application.
+Prerequisites:
 
-A few resources to get you started if this is your first Flutter project:
+Flutter development environment set up (https://flutter.dev/get-started)
+Familiarity with Dart programming
+Installation:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Clone this repository: git clone https://<your_repository_url>
+Navigate to the project directory: cd timbu_app
+Install dependencies: flutter pub get
+Running the App:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Connect your device or launch an emulator.
+Run the app: flutter run
+
+
+Features:
+
+- Display gadgets for a gadget store 
+
+Screenshots
+
+screenshots\timbb home.jpg
+screenshots\TIMBU COMPLETE MAIN.jpg
