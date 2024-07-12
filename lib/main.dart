@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:timbu_api_app/screens/homescreen.dart';
 import 'providers/product_provider.dart';
-import 'screens/product_list_screen.dart';
+// import 'screens/product_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         debugShowCheckedModeBanner: false,
-        home: const ProductListScreen(),
+        home: const HomeScreen(),
       ),
     );
   }

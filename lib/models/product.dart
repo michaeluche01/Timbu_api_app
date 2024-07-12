@@ -25,6 +25,7 @@
 // }
 
 
+
 class Product {
   int page;
   int size;
@@ -55,6 +56,14 @@ class Product {
       items: List<Item>.from(json['items'].map((item) => Item.fromJson(item))),
     );
   }
+
+  // get currentPrice => currentPrice;
+
+  // get productImage => productImage;
+
+  // get name => name;
+
+  // get isAvailable => isAvailable;
 }
 
 class Item {

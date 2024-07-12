@@ -1,14 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:timbu_api_app/models/product.dart';
+import 'package:timbu_api_app/providers/constants.dart';
 
 class ApiService {
-  static const String baseUrl = 'https://api.timbu.cloud/products';
-  static const String apiKey =
-      'ade3a017aae344c5b3f2fc32598cfd6e20240708233703962021';
-  static const String appId = 'KAE9RX3DMKYJ95D';
-  static const String organizationId = '698268b2479143839f836826adb7a803';
-
   Future<String> login() async {
     final response = await http.post(
       Uri.parse('https://api.timbu.cloud/auth/login'),
@@ -27,19 +22,23 @@ class ApiService {
     }
   }
 
-  Future <List<Product>> fetchProducts() async {
-    final String accessToken = await login();
+  Future<Product> fetchProducts() async {
     const url =
-        '$baseUrl?organization_id=$organizationId&reverse_sort=false&page=1&size=25&Appid=$appId&Apikey=$apiKey';
+        '$kbaseUrl?organization_id=$korganizationId&reverse_sort=false&page=1&size=25&Appid=$kappId&Apikey=$kapiKey';
     // const url =
     //     '$baseUrl?organization_id=$organizationId&reverse_sort=false&page=1&size=25&appId=$appId&apiKey=$apiKey';
 
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
-      print('Response recieved: ${response.body}');
-      List<dynamic> data = json.decode(response.body)['items'];
-      return data.map((items) => Product.fromJson(items)).toList();
+      final data = json.decode(response.body);
+
+      Product mapProducts = Product.fromJson(data);
+
+      print(mapProducts);
+
+      // print('wahala ${data.map((items) => Product.fromJson(items)).toList()}');
+      return mapProducts;
     } else {
       print('Failed to load products: ${response.statusCode}');
       throw Exception('Failed to load products');
